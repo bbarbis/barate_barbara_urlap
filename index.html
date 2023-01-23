@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minta Űrlapok</title>
+    <meta name="author" content="Baraté Barbara">
+</head>
+<body>
+    <main>
+        <!-- <form action="#" method="get" enctype="application/x-www-form-urlencoded">-->
+        <form action="#" method="post" oninput="csuszkaki.value=parseInt(edesseg.value)">
+        <label for="vnev">Vezetéknév:</label>
+        <input type="text" name="vnev" id="vnev" placeholder="Vezetéknév">
+        <br>
+        <label for="k">Keresztnév:</label>
+        <input type="text" name="knev" id="knev" value="Keresztnév">
+        <br>
+        <label for="telo">Telefonszám:</label>
+        <input type="tel" name="telo" id="telo">
+        <br>
+        <label for="lab">Láb méret</label>
+        <input type="number" min="10" max="70" name="lab" id="lab">
+        <br>
+        <label for="szdatum szido">Születési dátum, idő: </label>
+        <input type="date" name="szdatum" id="szdatum">
+        <input type="time" name="szido" id="szido">
+        <br>
+        <label for="emailem">E-mail: </label>
+        <input type="email" name="emailem" id="emailem">
+        <br>
+        <label for="jsz">Jelszó: </label>
+        <input type="password" name="jsz" id="jsz">
+        
+        <fieldset>
+            <legend>Érdeklődési körök:</legend>
+            <label for="kfilmek">Kedvenc filmjeim:</label>
+            <br>
+            <input type="checkbox" name="kfilm" id="valasz1" value="1">
+            <label for="kfilm">Másnaposok 1</label>
+            <br>
+            <input type="checkbox" name="kfilm2" id="valasz2" value="2">
+            <label for="kfilm2">Másnaposok 2</label>
+            <br>
+            <input type="checkbox" name="kfilm3" id="valasz3" value="3" checked>
+            <label for="kfilm3">Vihar sziget</label>
+            <br>
+            <input type="checkbox" name="kfilm4" id="valasz4" value="4">
+            <label for="kfilm4">Vegyél el</label>
+            <br>
+            <label for="szin">A legkedvesebb szinem:</label>
+            <input type="color" name="szin" id="szin">
+            <br>
+            <label for="konyv">Elolvasott könyvek száma:</label>
+            <br>
+            <input type="radio" name="konyv" id="konyv1" value="konyv1" checked>
+            <label for="konyv">0-50</label>
+            <br>
+            <input type="radio" name="konyv" id="konyv2" value="konyv2">
+            <label for="konyv">51-100</label>
+            <br>
+            <input type="radio" name="konyv" id="konyv3" value="konyv3">
+            <label for="konyv">100-1000</label>
+            <br>
+            <input type="radio" name="konyv" id="konyv4" value="konyv4">
+            <label for="konyv">1000 felett</label>
+            <br>
+            <label for="edesseg">Menniyre kedvelem az édességet: 1</label>
+            <input type="range" min="1" max="5" name="edesseg" id="edesseg" value="3">
+            <label for="edesseg">5 A kiválasztott érték: </label>
+            <output name="csuszkaki" for="edesseg">3</output>
+
+        </fieldset>
+        <label for="vel">Vélemény:</label>
+        <textarea name="vel" id="vel" rows="5" cols="20">
+Úgy gondolom, hogy ...
+        </textarea>
+        <br>
+        <label for="ertekeles">Értékelés: </label>
+        <select name="ertekeles" id="ertekeles" size="4" multiple>
+            <optgroup label="Számos értékelés:">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected >5</option>
+            </optgroup>
+            <optgroup label="Szöveges érétkelés">
+                <option value="egy">elégtelen</option>
+                <option value="ketto">elégséges</option>
+                <option value="harom">közepes</option>
+                <option value="negy">jó</option>
+                <option value="ot"selected>jeles</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <input type="submit" value="Küldés">
+        <input type="reset" value="Alaphelyzetbe">
+        </form>
+    </main>
+</body>
+</html>
